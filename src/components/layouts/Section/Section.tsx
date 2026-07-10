@@ -6,15 +6,20 @@ type SectionProps = {
   children: React.ReactNode;
   spacing?: SectionSpacing;
   className?: string;
+  id?: string;
 };
 
 export function Section({
   children,
   spacing = "md",
   className = "",
+  id,
 }: SectionProps) {
   return (
-    <section className={`${styles.section} ${styles[spacing]} ${className}`}>
+    <section
+      id={id}
+      className={`${styles.section} ${styles[spacing]} ${className}`}
+    >
       {children}
     </section>
   );

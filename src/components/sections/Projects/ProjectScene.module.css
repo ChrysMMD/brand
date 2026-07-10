@@ -1,0 +1,126 @@
+.scene {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  aspect-ratio: 1220 / 730;
+
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-medium);
+
+  background-color: var(--color-background);
+}
+
+.image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: min(42%, 470px);
+  padding: clamp(var(--space-5), 4vw, var(--space-9))
+    clamp(var(--space-5), 4vw, var(--space-8));
+
+  color: var(--color-white);
+}
+
+.title {
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+  font-size: var(--display-l-size);
+  font-weight: var(--display-l-weight);
+  line-height: var(--display-l-line-height);
+}
+
+.description {
+  margin-top: var(--space-6);
+
+  color: var(--color-white);
+  font-size: var(--body-large-size);
+  line-height: var(--body-large-line-height);
+}
+
+.information {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-7);
+
+  width: 100%;
+  margin-block: var(--space-6);
+}
+
+.column {
+  min-width: 0;
+}
+
+.subheading {
+  margin-bottom: var(--space-3);
+
+  color: var(--color-primary);
+
+  font-family: var(--font-body);
+  font-size: var(--body-large-size);
+  font-weight: var(--weight-medium);
+  line-height: var(--body-large-line-height);
+  text-transform: uppercase;
+}
+
+.roleList,
+.tags {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.roleList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+
+  color: var(--color-white);
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.tag {
+  padding: var(--space-2) var(--space-3);
+
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-full);
+
+  background: var(--color-forest-700);
+  color: var(--color-white);
+
+  font-size: var(--small-size);
+  line-height: var(--small-line-height);
+  text-align: center;
+}
+
+.comingSoon {
+  margin-top: auto;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-navigation);
+  font-size: var(--button-size);
+  font-weight: var(--button-weight);
+  text-transform: uppercase;
+}

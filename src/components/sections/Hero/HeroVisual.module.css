@@ -1,0 +1,11 @@
+.visual {
+  position: relative;
+  min-width: 0;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
