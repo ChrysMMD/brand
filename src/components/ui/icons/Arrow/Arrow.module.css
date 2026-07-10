@@ -1,0 +1,17 @@
+.arrow {
+  display: block;
+  flex-shrink: 0;
+
+  width: 20px;
+  height: 12px;
+
+  transition: transform var(--transition-fast);
+}
+
+.right {
+  transform: rotate(0deg);
+}
+
+.left {
+  transform: rotate(180deg);
+}

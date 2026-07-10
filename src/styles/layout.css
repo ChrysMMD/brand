@@ -1,0 +1,23 @@
+/* src/design-system/layout.css */
+
+:root {
+  /* Containers */
+  --container-sm: 720px;
+  --container-md: 960px;
+  --container-lg: 1120px;
+  --container-xl: 1220px;
+
+  /* Page spacing */
+  --page-padding: clamp(var(--space-4), 4vw, var(--space-8));
+
+  /* Section spacing */
+  --section-padding-sm: clamp(var(--space-8), 6vw, var(--space-10));
+  --section-padding-md: clamp(var(--space-10), 8vw, var(--space-11));
+  --section-padding-lg: clamp(var(--space-11), 10vw, 8rem);
+
+  /* Layout gaps */
+  --layout-gap-sm: var(--space-4);
+  --layout-gap-md: var(--space-6);
+  --layout-gap-lg: var(--space-8);
+  --layout-gap-xl: var(--space-10);
+}

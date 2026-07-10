@@ -1,0 +1,15 @@
+.section {
+  position: relative;
+}
+
+.sm {
+  padding-block: var(--section-padding-sm);
+}
+
+.md {
+  padding-block: var(--section-padding-md);
+}
+
+.lg {
+  padding-block: var(--section-padding-lg);
+}

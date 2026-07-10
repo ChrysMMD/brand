@@ -1,0 +1,52 @@
+:root {
+  /* PAGE */
+  --color-background: var(--color-forest-900);
+  --color-background-soft: var(--color-sand);
+
+  --color-primary: var(--color-gold);
+
+  /* BUTTONS */
+  --button-primary-background: var(--color-forest-900);
+  --button-primary-border: var(--color-gold);
+  --button-primary-text: var(--color-white);
+
+  --button-secondary-text: var(--color-forest-900);
+  --button-secondary-border: var(--color-forest-900);
+
+  --button-simple-text: var(--color-forest-700);
+
+  --button-primary-background-hover: var(--color-forest-700);
+  --button-primary-border-hover: var(--color-gold);
+
+  --button-secondary-background-hover: var(--color-sand);
+  --button-secondary-border-hover: var(--color-gold);
+
+  /* TEXT */
+  --color-text: var(--color-white);
+  --color-text-muted: var(--color-stone);
+  --color-text-accent: var(--color-gold);
+  --color-text-dark: var(--color-charcoal);
+  --color-text-inverted: var(--color-forest-900);
+
+  /* BORDERS */
+  --color-border: var(--color-gold);
+  --color-border-dark: var(--color-forest-900);
+
+  /* OVERLAYS */
+  --color-overlay-dark: rgba(13, 31, 27, 0.72);
+  --color-overlay-soft: rgba(247, 244, 238, 0.08);
+
+  /* RADIUS */
+  --radius-card: var(--radius-medium);
+  --radius-pill: var(--radius-full);
+  --radius-image: var(--radius-medium);
+
+  /* SHADOWS */
+  --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.28);
+  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.22);
+  --shadow-glow: 0 0 48px color-mix(in srgb, var(--color-gold) 22%, transparent);
+
+  /* Z-INDEX */
+  --z-header: 50;
+  --z-overlay: 100;
+}
