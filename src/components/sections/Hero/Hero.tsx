@@ -6,13 +6,9 @@ import styles from "./Hero.module.css";
 
 export function Hero() {
   return (
-    <Section className={styles.hero} spacing="lg">
-      <Container size="xl">
-        <div className={styles.layout}>
-          <HeroContent />
-          <HeroVisual />
-        </div>
-      </Container>
-    </Section>
+    <div className={styles.layout}>
+      <HeroContent />
+      <HeroVisual />
+    </div>
   );
 }

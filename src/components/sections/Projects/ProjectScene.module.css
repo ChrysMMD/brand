@@ -1,0 +1,375 @@
+.scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+/* ======================================================
+   Background
+====================================================== */
+
+.background {
+  z-index: -2;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ======================================================
+   Object area
+====================================================== */
+
+.objects {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Shared scene-object styling */
+
+.sceneObject {
+  position: absolute;
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ======================================================
+   Main objects
+====================================================== */
+
+.mobileShadow {
+  z-index: 2;
+
+  right: 15%;
+  bottom: 2%;
+
+  width: min(65%, 580px);
+
+  opacity: 0;
+
+  animation: scaleIn 700ms var(--ease-out) forwards;
+}
+
+.mobile {
+  z-index: 3;
+
+  right: 15%;
+  bottom: 7%;
+
+  width: min(70%, 650px);
+
+  opacity: 0;
+
+  animation: fadeRight 800ms var(--ease-out) 120ms forwards;
+}
+
+/* ======================================================
+   Cards
+====================================================== */
+
+.bookingCard {
+  z-index: 4;
+  right: 12%;
+  bottom: 7%;
+  width: min(34%, 270px);
+  opacity: 0;
+
+  animation: fadeUp var(--duration-slow) var(--ease-out) 300ms forwards;
+}
+
+.frontPageCard {
+  z-index: 1;
+  top: 5%;
+  right: 10%;
+  width: min(38%, 180px);
+  opacity: 0;
+
+  animation: fadeLeft var(--duration-slow) var(--ease-out) 520ms forwards;
+}
+
+.swipe {
+  z-index: 5;
+  top: 6%;
+  right: 29%;
+  width: min(26%, 280px);
+  opacity: 0;
+
+  animation: fadeDown var(--duration-slow) var(--ease-out) 720ms forwards;
+}
+
+/* ======================================================
+   Particles
+====================================================== */
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  mix-blend-mode: screen;
+}
+
+.particle {
+  position: absolute;
+
+  left: var(--particle-left);
+  top: var(--particle-top);
+
+  width: var(--particle-size);
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 244, 210, 1) 0%,
+    rgba(255, 193, 116, 0.85) 28%,
+    rgba(255, 139, 72, 0.35) 58%,
+    transparent 76%
+  );
+
+  opacity: 0;
+
+  filter: blur(0.3px) drop-shadow(0 0 5px rgba(255, 183, 100, 0.7));
+
+  animation: dustDrift var(--particle-duration) ease-in-out
+    var(--particle-delay) infinite;
+}
+
+.particle:nth-child(3n) {
+  filter: blur(1.4px) drop-shadow(0 0 8px rgba(255, 183, 100, 0.55));
+}
+
+.particle:nth-child(4n) {
+  opacity: 0.6;
+}
+
+/* ======================================================
+   Beam
+====================================================== */
+
+.beam {
+  z-index: 8;
+  top: 2%;
+  left: 50%;
+  width: min(38%, 420px);
+  height: auto;
+  opacity: 0;
+  mix-blend-mode: screen;
+  pointer-events: none;
+
+  animation:
+    beamFade var(--duration-slow) var(--ease-out) 3s forwards,
+    beamPulse 6s ease-in-out 8s infinite;
+}
+
+/* ======================================================
+   Doodles
+====================================================== */
+
+.doodleBooking,
+.doodleInteractive,
+.doodleTerritory {
+  z-index: 100;
+
+  height: auto;
+
+  opacity: 0;
+  mix-blend-mode: screen;
+}
+
+.doodleBooking {
+  bottom: 10%;
+  right: 1%;
+  width: 200px;
+
+  animation: popIn 0.5s var(--ease-out) 1000ms forwards;
+}
+
+.doodleInteractive {
+  top: 2%;
+  right: 23%;
+  width: 240px;
+
+  animation: popIn 0.5s var(--ease-out) 1150ms forwards;
+}
+
+.doodleTerritory {
+  right: 38%;
+  top: 25%;
+
+  width: 200px;
+
+  animation: popIn 0.5s var(--ease-out) 1300ms forwards;
+}
+
+/* ======================================================
+   Animations
+====================================================== */
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(70px) translateY(20px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px) translateY(-10px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-35px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes beamFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-18px) scale(0.96);
+    filter: brightness(0.8) saturate(1) blur(8px);
+  }
+
+  to {
+    opacity: 0.88;
+    transform: translateX(-50%) translateY(0) scale(1);
+    filter: brightness(1.25) saturate(1.25) blur(0)
+      drop-shadow(0 0 18px rgba(255, 185, 110, 0.5));
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotate(-8deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.08) rotate(2deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes beamPulse {
+  0%,
+  100% {
+    opacity: 0.78;
+
+    filter: brightness(1.1) saturate(1.1)
+      drop-shadow(0 0 12px rgba(255, 179, 105, 0.35));
+  }
+
+  50% {
+    opacity: 1;
+
+    filter: brightness(1.55) saturate(1.35)
+      drop-shadow(0 0 32px rgba(255, 193, 120, 0.75));
+  }
+}
+
+@keyframes dustDrift {
+  0% {
+    opacity: 0.12;
+    transform: translate3d(0, 0, 0) scale(0.65);
+  }
+
+  20% {
+    opacity: 0.8;
+    transform: translate3d(var(--particle-x-one), var(--particle-y-one), 0)
+      scale(1);
+  }
+
+  48% {
+    opacity: 0.45;
+    transform: translate3d(var(--particle-x-two), var(--particle-y-two), 0)
+      scale(0.82);
+  }
+
+  72% {
+    opacity: 0.75;
+    transform: translate3d(
+        calc(var(--particle-x-one) * -0.55),
+        calc(var(--particle-y-one) * 0.6),
+        0
+      )
+      scale(1.1);
+  }
+
+  100% {
+    opacity: 0.1;
+    transform: translate3d(0, 0, 0) scale(0.7);
+  }
+}

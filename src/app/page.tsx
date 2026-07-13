@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/ui/Navbar/Navbar";
 import { Hero } from "@/components/sections/Hero/Hero";
+import { ProjectCarousel } from "@/components/sections/Projects/ProjectCarousel";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
         }}
       >
         <Hero />
+        <ProjectCarousel />
       </main>
     </>
   );
