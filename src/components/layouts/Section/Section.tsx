@@ -7,18 +7,20 @@ type SectionProps = {
   spacing?: SectionSpacing;
   className?: string;
   id?: string;
+  variant?: "default" | "hero" | "projects";
 };
 
 export function Section({
   children,
-  spacing = "md",
+  spacing = "sm",
   className = "",
   id,
+  variant = "default",
 }: SectionProps) {
   return (
     <section
       id={id}
-      className={`${styles.section} ${styles[spacing]} ${className}`}
+      className={`${styles.section} ${styles[variant]} ${styles[spacing]} ${className}`}
     >
       {children}
     </section>

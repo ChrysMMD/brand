@@ -1,16 +1,17 @@
 .carousel {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--space-4);
+
+  width: 100%;
+  margin-inline: auto;
 }
 
 .presentationArea {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
+  position: relative;
 
   width: 100%;
-  padding: 56px;
+  padding-inline: 44px;
 }
 
 .presentation {
@@ -19,42 +20,48 @@
   overflow: hidden;
 
   width: 100%;
-  min-height: 730px;
+  height: clamp(480px, 62vh, 680px);
 
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border-green);
   border-radius: var(--radius-medium);
 
   background-color: var(--color-background);
+  container-type: size;
+}
+
+.presentation > * {
+  height: 100%;
 }
 
 .presentation::after {
   content: "";
+
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 9;
+
   pointer-events: none;
+
   background: linear-gradient(
     90deg,
-    rgba(8, 15, 14, 0.78) 0%,
-    rgba(8, 15, 14, 0.62) 27%,
-    rgba(8, 15, 14, 0.18) 52%,
-    transparent 72%
+    rgba(8, 15, 14, 0.82) 0%,
+    rgba(8, 15, 14, 0.66) 26%,
+    rgba(8, 15, 14, 0.24) 48%,
+    transparent 70%
   );
 }
 
-.controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .navigationButton {
+  position: absolute;
+  top: 50%;
+  z-index: 30;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   padding: 0;
 
   border: 1px solid var(--color-primary);
@@ -65,32 +72,30 @@
 
   cursor: pointer;
 
-  transition:
-    background-color var(--transition-fast),
-    color var(--transition-fast),
-    transform var(--transition-fast);
+  transform: translateY(-50%);
 }
 
 .navigationButton:hover {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: var(--color-background);
-
-  transform: scale(1.06);
 }
 
-.navigationButton:active {
-  transform: scale(0.96);
+.previousButton {
+  left: -10px;
 }
 
-.navigationButton:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 4px;
+.nextButton {
+  right: -10px;
 }
+
 .thumbnails {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--space-6);
 
-  width: 100%;
+  width: calc(100% - 88px);
+  margin-inline: auto;
+
+  padding-block: 4px;
 }

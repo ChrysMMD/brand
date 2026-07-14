@@ -4,11 +4,12 @@
   /* Containers */
   --container-sm: 720px;
   --container-md: 960px;
-  --container-lg: 1120px;
-  --container-xl: 1220px;
+  --container-lg: 1280px;
+  --container-xl: 1360px;
 
   /* Page spacing */
-  --page-padding: clamp(var(--space-4), 4vw, var(--space-8));
+  --page-padding: clamp(1rem, 3vw, 3rem);
+  --header-height: 40px;
 
   /* Section spacing */
   --section-padding-sm: clamp(var(--space-8), 6vw, var(--space-10));

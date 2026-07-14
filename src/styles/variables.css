@@ -2,7 +2,6 @@
   /* PAGE */
   --color-background: var(--color-forest-900);
   --color-background-soft: var(--color-sand);
-
   --color-primary: var(--color-gold);
 
   /* BUTTONS */
@@ -10,8 +9,8 @@
   --button-primary-border: var(--color-gold);
   --button-primary-text: var(--color-white);
 
-  --button-secondary-text: var(--color-forest-900);
-  --button-secondary-border: var(--color-forest-900);
+  --button-secondary-text: var(--color-gold);
+  --button-secondary-border: var(--color-gold);
 
   --button-simple-text: var(--color-forest-700);
 
@@ -30,6 +29,7 @@
 
   /* BORDERS */
   --color-border: var(--color-gold);
+  --color-border-green: var(--color-forest-500);
   --color-border-dark: var(--color-forest-900);
 
   /* OVERLAYS */

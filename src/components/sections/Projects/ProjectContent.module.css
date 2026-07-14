@@ -7,9 +7,12 @@
   align-items: flex-start;
 
   width: min(38%, 470px);
-  min-height: 730px;
+  height: 100%;
+  box-sizing: border-box;
 
-  padding: var(--space-8) 0 var(--space-8) var(--space-8);
+  padding: clamp(var(--space-5), 4cqh, var(--space-8)) 0
+    clamp(var(--space-5), 4cqh, var(--space-8))
+    clamp(var(--space-5), 4cqh, var(--space-8));
 
   color: var(--color-text);
 }
@@ -24,19 +27,19 @@
   color: var(--color-text);
 
   font-family: var(--font-heading);
-  font-size: var(--display-l-size);
+  font-size: clamp(3rem, 9cqh, var(--display-l-size));
   font-weight: var(--display-l-weight);
-  line-height: var(--display-l-line-height);
+  line-height: 0.95;
   letter-spacing: var(--display-l-letter-spacing);
 }
 
 .decoration {
   display: block;
 
-  width: 124px;
+  width: clamp(90px, 20cqh, 124px);
   height: 3px;
 
-  margin-top: var(--space-3);
+  margin-top: clamp(var(--space-2), 2cqh, var(--space-3));
 
   border-radius: var(--radius-full);
   background-color: var(--color-primary);
@@ -45,22 +48,22 @@
 .description {
   max-width: 36ch;
 
-  margin-top: var(--space-5);
+  margin-top: clamp(var(--space-3), 2.5cqh, var(--space-5));
 
   color: var(--color-text);
 
-  font-size: var(--body-large-size);
-  line-height: var(--body-large-line-height);
+  font-size: clamp(var(--body-size), 2.8cqh, var(--body-large-size));
+  line-height: 1.55;
 }
 
 .details {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-6);
+  gap: clamp(var(--space-4), 3cqh, var(--space-6));
 
   width: 100%;
 
-  margin-block: var(--space-6);
+  margin-block: clamp(var(--space-4), 3.5cqh, var(--space-6));
 }
 
 .detailGroup {
@@ -68,14 +71,14 @@
 }
 
 .subheading {
-  margin-bottom: var(--space-3);
+  margin-bottom: clamp(var(--space-2), 2cqh, var(--space-3));
 
   color: var(--color-primary);
 
   font-family: var(--font-body);
-  font-size: var(--body-large-size);
+  font-size: clamp(var(--body-size), 2.5cqh, var(--body-large-size));
   font-weight: var(--weight-medium);
-  line-height: var(--body-large-line-height);
+  line-height: 1.2;
 
   text-transform: uppercase;
 }
@@ -91,7 +94,7 @@
 .roleList {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: clamp(var(--space-2), 2cqh, var(--space-3));
 }
 
 .role {
@@ -108,11 +111,21 @@
 .roleIcon {
   flex: 0 0 auto;
 
-  width: 36px;
-  height: 36px;
+  display: grid;
+  place-items: center;
+
+  width: clamp(28px, 5.5cqh, 36px);
+  height: clamp(28px, 5.5cqh, 36px);
 
   border: 1px solid var(--color-primary);
   border-radius: var(--radius-full);
+
+  line-height: 0;
+}
+
+.roleIcon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .techStack {
@@ -126,7 +139,8 @@
   align-items: center;
   justify-content: center;
 
-  padding: var(--space-2) var(--space-5);
+  padding: clamp(6px, 1.4cqh, var(--space-2))
+    clamp(var(--space-3), 3cqh, var(--space-5));
 
   border: 1px solid var(--color-primary);
   border-radius: var(--radius-full);
@@ -141,7 +155,7 @@
 }
 
 .action {
-  width: 100%;
+  width: 70%;
   margin-top: auto;
 }
 

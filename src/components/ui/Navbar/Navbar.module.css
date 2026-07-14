@@ -37,11 +37,11 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  font-family: var(--font-navigation);
-  font-size: var(--small-size);
+  font-family: var(--font-subheading);
+  font-size: var(--small-medium-size);
   font-weight: var(--weight-regular);
   line-height: 1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
 
   transition: color var(--transition-fast);
 }

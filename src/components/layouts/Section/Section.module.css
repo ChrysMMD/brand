@@ -1,15 +1,25 @@
 .section {
-  position: relative;
+  width: 100%;
 }
 
-.sm {
-  padding-block: var(--section-padding-sm);
+.default {
+  padding-block: var(--space-16);
+  padding-bottom: 0px;
 }
 
-.md {
-  padding-block: var(--section-padding-md);
+.hero {
+  padding-top: 0;
+  padding-bottom: var(--space-6);
 }
 
-.lg {
-  padding-block: var(--section-padding-lg);
+.projects {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+
+  padding-block: clamp(3rem, 6vh, 5rem);
+
+  .projects > * {
+    width: 100%;
+  }
 }

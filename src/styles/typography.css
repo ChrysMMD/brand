@@ -2,9 +2,10 @@
 
 :root {
   /* Font families */
-  --font-heading: var(--font-cormorant);
-  --font-body: var(--font-inter);
-  --font-navigation: var(--font-oswald);
+  --font-heading: var(--font-cormorant-garamond), serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-subheading: var(--font-oswald), sans-serif;
+  --font-numbers: var(--font-cormorant-infant), serif;
 
   /* Font weights */
   --weight-regular: 400;
@@ -103,6 +104,7 @@ h2 {
   font-family: var(--font-heading);
   color: var(--color-text);
   text-wrap: balance;
+  text-transform: uppercase;
 }
 
 h3,
@@ -157,7 +159,7 @@ strong {
 }
 
 .h3 {
-  font-family: var(--font-navigation);
+  font-family: var(--font-oswald);
   font-size: var(--h3-size);
   line-height: var(--h3-line-height);
   font-weight: var(--h3-weight);
@@ -165,7 +167,7 @@ strong {
 }
 
 .h4 {
-  font-family: var(--font-navigation);
+  font-family: var(--font-oswald);
   font-size: var(--h4-size);
   line-height: var(--h4-line-height);
   font-weight: var(--h4-weight);

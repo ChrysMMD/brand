@@ -7,7 +7,6 @@ import { ProjectContent } from "./ProjectContent";
 import { ProjectScene } from "./ProjectScene";
 import { ProjectThumbnail } from "./ProjectThumbnail";
 import styles from "./ProjectCarousel.module.css";
-import { Section } from "@/components/layouts/Section/Section";
 
 export function ProjectCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -65,11 +64,7 @@ export function ProjectCarousel() {
         </button>
       </div>
 
-      <div
-        className={styles.thumbnails}
-        role="tablist"
-        aria-label="Choose project"
-      >
+      <div className={styles.thumbnails}>
         {projects.map((project, index) => (
           <ProjectThumbnail
             key={project.id}

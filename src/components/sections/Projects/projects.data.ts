@@ -1,3 +1,6 @@
+import { type LucideIcon } from "lucide-react";
+import { Binoculars, PanelsTopLeft, CodeXml, Diamond } from "lucide-react";
+
 export type ProjectSceneAssets = {
   background: string;
   mobile?: string;
@@ -13,7 +16,7 @@ export type ProjectSceneAssets = {
 
 export type ProjectRole = {
   label: string;
-  icon?: string;
+  icon: LucideIcon;
 };
 
 export type Project = {
@@ -46,10 +49,10 @@ export const projects: Project[] = [
     status: "published",
 
     roles: [
-      { label: "UX Research" },
-      { label: "UX/UI Design" },
-      { label: "Frontend Development" },
-      { label: "Branding" },
+      { label: "UX Research", icon: Binoculars },
+      { label: "UX/UI Design", icon: PanelsTopLeft },
+      { label: "Frontend Development", icon: CodeXml },
+      { label: "Branding", icon: Diamond },
     ],
 
     scene: {
@@ -95,7 +98,7 @@ export const projects: Project[] = [
       mobileShadow: "/images/projects/launching/shadow-mobile.webp",
     },
 
-    roles: [{ label: "UX Research" }],
+    roles: [{ label: "UX Research", icon: Binoculars }],
 
     techStack: ["Figma"],
 
@@ -112,7 +115,7 @@ export const projects: Project[] = [
       "Another project is currently being refined before publication.",
     status: "coming-soon",
 
-    roles: [{ label: "Digital Design" }],
+    roles: [{ label: "Digital Design", icon: PanelsTopLeft }],
     techStack: ["Figma"],
 
     scene: {

@@ -29,13 +29,19 @@ export function ProjectContent({ project }: ProjectContentProps) {
           <h4 className={styles.subheading}>My role</h4>
 
           <ul className={styles.roleList}>
-            {project.roles.map((role) => (
-              <li className={styles.role} key={role.label}>
-                <span className={styles.roleIcon} aria-hidden="true" />
+            {project.roles.map((role) => {
+              const Icon = role.icon;
 
-                <span>{role.label}</span>
-              </li>
-            ))}
+              return (
+                <li className={styles.role} key={role.label}>
+                  <span className={styles.roleIcon} aria-hidden="true">
+                    <Icon size={18} strokeWidth={1.75} />
+                  </span>
+
+                  <span>{role.label}</span>
+                </li>
+              );
+            })}
           </ul>
         </div>
 

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Oswald } from "next/font/google";
-import { Inter } from "next/font/google";
-import { Cormorant_Garamond } from "next/font/google";
-import { Cormorant_Infant } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Cormorant_Infant,
+  Inter,
+  Oswald,
+} from "next/font/google";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -13,19 +15,19 @@ const oswald = Oswald({
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-inter",
 });
 
 const cormorant_garamond = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-heading",
+  variable: "--font-cormorant-garamond",
 });
 
 const cormorant_infant = Cormorant_Infant({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-navigation",
+  variable: "--font-cormorant-infant",
 });
 
 export const metadata: Metadata = {
@@ -38,8 +40,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const fontVariables = [
+    oswald.variable,
+    inter.variable,
+    cormorant_garamond.variable,
+    cormorant_infant.variable,
+  ].join(" ");
+
   return (
-    <html lang="en" className={oswald.variable}>
+    <html lang="en" className={fontVariables}>
       <body>{children}</body>
     </html>
   );

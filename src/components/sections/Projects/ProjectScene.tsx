@@ -129,7 +129,7 @@ export function ProjectScene({ project }: ProjectSceneProps) {
         fill
         priority={project.id === "tusmoerke"}
         className={styles.background}
-        sizes="(max-width: 768px) 100vw, 65vw"
+        sizes="(max-width: 768px) 100vw, (max-width: 1440px) 92vw, 1220px"
       />
 
       <div className={styles.particles} aria-hidden="true">
@@ -171,6 +171,7 @@ export function ProjectScene({ project }: ProjectSceneProps) {
             alt=""
             width={459}
             height={456}
+            sizes="(max-width: 768px) 70vw, 650px"
             className={`${styles.sceneObject} ${styles.mobile}`}
           />
         )}
@@ -181,6 +182,7 @@ export function ProjectScene({ project }: ProjectSceneProps) {
             alt=""
             width={205}
             height={294}
+            sizes="(max-width: 768px) 35vw, 270px"
             className={`${styles.sceneObject} ${styles.bookingCard}`}
           />
         )}
@@ -189,8 +191,8 @@ export function ProjectScene({ project }: ProjectSceneProps) {
           <Image
             src={project.scene.frontPageCard}
             alt=""
-            width={128}
-            height={255}
+            width={328}
+            height={455}
             className={`${styles.sceneObject} ${styles.frontPageCard}`}
           />
         )}
@@ -199,8 +201,8 @@ export function ProjectScene({ project }: ProjectSceneProps) {
           <Image
             src={project.scene.swipe}
             alt=""
-            width={280}
-            height={90}
+            width={480}
+            height={290}
             className={`${styles.sceneObject} ${styles.swipe}`}
           />
         )}
@@ -222,8 +224,8 @@ export function ProjectScene({ project }: ProjectSceneProps) {
         <Image
           src={project.scene.doodleBooking}
           alt=""
-          width={120}
-          height={120}
+          width={400}
+          height={400}
           className={`${styles.sceneObject} ${styles.doodleBooking}`}
         />
       )}
@@ -232,8 +234,8 @@ export function ProjectScene({ project }: ProjectSceneProps) {
         <Image
           src={project.scene.doodleInteractive}
           alt=""
-          width={120}
-          height={120}
+          width={400}
+          height={400}
           className={`${styles.sceneObject} ${styles.doodleInteractive}`}
         />
       )}
@@ -242,8 +244,8 @@ export function ProjectScene({ project }: ProjectSceneProps) {
         <Image
           src={project.scene.doodleTerritory}
           alt=""
-          width={120}
-          height={120}
+          width={400}
+          height={400}
           className={`${styles.sceneObject} ${styles.doodleTerritory}`}
         />
       )}
