@@ -43,11 +43,11 @@
   --h3-weight: var(--weight-bold);
   --h3-letter-spacing: -0.01em;
 
-  /* H4 - 24/130 */
-  --h4-size: clamp(1.25rem, 2vw, 1.5rem);
-  --h4-line-height: 1.3;
-  --h4-weight: var(--weight-bold);
-  --h4-letter-spacing: 0;
+  /* H4 - 28/125 */
+  --h4-size: clamp(1.375rem, 2vw, 1.75rem);
+  --h4-line-height: 0.7;
+  --h4-weight: var(--weight-semibold);
+  --h4-letter-spacing: 0.01em;
 
   /* Body Large - 20/160 */
   --body-large-size: clamp(1rem, 1.5vw, 1.25rem);
@@ -67,9 +67,9 @@
   --small-weight: var(--weight-regular);
   --small-letter-spacing: 0;
 
-  /* Caption - 12/140 */
-  --caption-size: 0.75rem;
-  --caption-line-height: 1.4;
+  /* Caption - 13–14/145 */
+  --caption-size: clamp(0.8125rem, 1vw, 0.875rem);
+  --caption-line-height: 1.45;
   --caption-weight: var(--weight-regular);
   --caption-letter-spacing: 0.04em;
 
@@ -109,7 +109,7 @@ h2 {
 
 h3,
 h4 {
-  font-family: var(--font-navigation);
+  font-family: var(--font-subheading);
   color: var(--color-text);
   text-wrap: balance;
 }

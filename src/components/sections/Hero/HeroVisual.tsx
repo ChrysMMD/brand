@@ -5,7 +5,7 @@ export function HeroVisual() {
   return (
     <div className={styles.visual}>
       <Image
-        src="/images/hero/hero-collage.png"
+        src="/images/hero/hero-image.png"
         alt="Astrid working on digital design and frontend projects"
         width={760}
         height={680}

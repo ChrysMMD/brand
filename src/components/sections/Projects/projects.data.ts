@@ -1,14 +1,32 @@
-import { type LucideIcon } from "lucide-react";
-import { Binoculars, PanelsTopLeft, CodeXml, Diamond } from "lucide-react";
+import {
+  type LucideIcon,
+  Binoculars,
+  PanelsTopLeft,
+  CodeXml,
+  Diamond,
+} from "lucide-react";
 
 export type ProjectSceneAssets = {
   background: string;
+
+  // Tusmørke
   mobile?: string;
   mobileShadow?: string;
   swipe?: string;
   bookingCard?: string;
   frontPageCard?: string;
+
+  // Launching Soon
+  browser?: string;
+  browserShadow?: string;
+  comingSoonCard?: string;
+  lock?: string;
+  doodleIdea?: string;
+
+  // Shared
   beam?: string;
+
+  // Tusmørke doodles
   doodleInteractive?: string;
   doodleTerritory?: string;
   doodleBooking?: string;
@@ -16,6 +34,12 @@ export type ProjectSceneAssets = {
 
 export type ProjectRole = {
   label: string;
+  icon: LucideIcon;
+};
+
+export type ProjectProgress = {
+  label: string;
+  status: string;
   icon: LucideIcon;
 };
 
@@ -30,6 +54,7 @@ export type Project = {
 
   roles: ProjectRole[];
   techStack: string[];
+  progress?: ProjectProgress[];
 
   scene: ProjectSceneAssets;
 
@@ -89,18 +114,34 @@ export const projects: Project[] = [
     title: "Launching soon",
     subtitle: "New case study",
     description:
-      "A new project is currently being prepared and will be added soon.",
+      "I'm currently crafting a new experience from the ground up. It's still taking shape, but I can't wait to share it with you.",
     status: "coming-soon",
 
+    roles: [],
+    techStack: [],
+
+    progress: [
+      {
+        label: "Research",
+        status: "Complete",
+        icon: Binoculars,
+      },
+      {
+        label: "Design",
+        status: "In progress",
+        icon: PanelsTopLeft,
+      },
+      {
+        label: "Development",
+        status: "In progress",
+        icon: CodeXml,
+      },
+    ],
+
     scene: {
-      background: "/images/projects/launching/background.webp",
-      mobile: "/images/projects/launching/scene-mobile.webp",
-      mobileShadow: "/images/projects/launching/shadow-mobile.webp",
+      background: "/images/projectScene/launching/background.png",
+      lock: "/images/projectScene/launching/lock.png",
     },
-
-    roles: [{ label: "UX Research", icon: Binoculars }],
-
-    techStack: ["Figma"],
 
     thumbnailImage: "/images/thumbnails/thumbnail_launching.webp",
     thumbnailAlt: "Preview of an upcoming project",
@@ -112,16 +153,33 @@ export const projects: Project[] = [
     title: "Launching soon",
     subtitle: "New case study",
     description:
-      "Another project is currently being refined before publication.",
+      "I'm currently crafting a new experience from the ground up. It's still taking shape, but I can't wait to share it with you.",
     status: "coming-soon",
 
-    roles: [{ label: "Digital Design", icon: PanelsTopLeft }],
-    techStack: ["Figma"],
+    roles: [],
+    techStack: [],
+
+    progress: [
+      {
+        label: "Research",
+        status: "In progress",
+        icon: Binoculars,
+      },
+      {
+        label: "Design",
+        status: "In progress",
+        icon: PanelsTopLeft,
+      },
+      {
+        label: "Development",
+        status: "In progress",
+        icon: CodeXml,
+      },
+    ],
 
     scene: {
-      background: "/images/projects/tusmoerke/background.webp",
-      mobile: "/images/projects/tusmoerke/scene-mobile.webp",
-      mobileShadow: "/images/projects/tusmoerke/shadow-mobile.webp",
+      background: "/images/projectScene/launching/background.png",
+      lock: "/images/projectScene/launching/lock.png",
     },
 
     thumbnailImage: "/images/thumbnails/thumbnail_launching.webp",

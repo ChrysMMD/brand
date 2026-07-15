@@ -249,6 +249,27 @@ export function ProjectScene({ project }: ProjectSceneProps) {
           className={`${styles.sceneObject} ${styles.doodleTerritory}`}
         />
       )}
+
+      {project.status === "coming-soon" && (
+        <div className={styles.comingSoonScene}>
+          {project.scene.lock && (
+            <Image
+              src={project.scene.lock}
+              alt=""
+              width={180}
+              height={180}
+              sizes="120px"
+              className={styles.lock}
+            />
+          )}
+
+          <p className={styles.sceneMessage}>
+            Something great
+            <br />
+            is coming
+          </p>
+        </div>
+      )}
     </div>
   );
 }

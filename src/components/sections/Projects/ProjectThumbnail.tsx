@@ -39,8 +39,8 @@ export function ProjectThumbnail({
 
       <div className={styles.content}>
         <span className={styles.number}>{project.number}</span>
-        <h3 className={styles.title}>{project.title}</h3>
-        <p className={styles.subtitle}>{project.subtitle}</p>
+        <h4 className={styles.title}>{project.title}</h4>
+        <p className={`${styles.caption} caption`}>{project.subtitle}</p>
       </div>
     </button>
   );

@@ -24,39 +24,60 @@ export function ProjectContent({ project }: ProjectContentProps) {
         <p className={styles.description}>{project.description}</p>
       </div>
 
-      <div className={styles.details}>
-        <div className={styles.detailGroup}>
-          <h4 className={styles.subheading}>My role</h4>
+      {isPublished ? (
+        <div className={styles.details}>
+          <div className={styles.detailGroup}>
+            <h4 className={styles.subheading}>My role</h4>
 
-          <ul className={styles.roleList}>
-            {project.roles.map((role) => {
-              const Icon = role.icon;
+            <ul className={styles.roleList}>
+              {project.roles.map((role) => {
+                const Icon = role.icon;
 
-              return (
-                <li className={styles.role} key={role.label}>
-                  <span className={styles.roleIcon} aria-hidden="true">
-                    <Icon size={18} strokeWidth={1.75} />
-                  </span>
+                return (
+                  <li className={styles.role} key={role.label}>
+                    <span className={styles.roleIcon} aria-hidden="true">
+                      <Icon size={18} strokeWidth={1.75} />
+                    </span>
 
-                  <span>{role.label}</span>
+                    <span>{role.label}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          <div className={styles.detailGroup}>
+            <h4 className={styles.subheading}>Tech stack</h4>
+
+            <ul className={styles.techStack}>
+              {project.techStack.map((technology) => (
+                <li className={styles.tag} key={technology}>
+                  {technology}
                 </li>
-              );
-            })}
-          </ul>
+              ))}
+            </ul>
+          </div>
         </div>
+      ) : (
+        <ul className={styles.progressList}>
+          {project.progress?.map((item) => {
+            const Icon = item.icon;
 
-        <div className={styles.detailGroup}>
-          <h4 className={styles.subheading}>Tech stack</h4>
+            return (
+              <li className={styles.progressItem} key={item.label}>
+                <span className={styles.progressIcon} aria-hidden="true">
+                  <Icon size={20} strokeWidth={1.75} />
+                </span>
 
-          <ul className={styles.techStack}>
-            {project.techStack.map((technology) => (
-              <li className={styles.tag} key={technology}>
-                {technology}
+                <span className={styles.progressText}>
+                  <span className={styles.progressLabel}>{item.label}</span>
+                  <span className={styles.progressStatus}>{item.status}</span>
+                </span>
               </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+            );
+          })}
+        </ul>
+      )}
 
       <div className={styles.action}>
         {isPublished && project.href ? (
