@@ -1,0 +1,91 @@
+.links {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 520px;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+
+  padding-block: var(--space-6);
+
+  color: inherit;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgb(197 157 72 / 35%);
+
+  transition: var(--transition-medium);
+}
+
+.contactLink:hover {
+  transform: translateX(6px);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 auto;
+
+  width: 56px;
+  height: 56px;
+}
+
+.iconImage {
+  display: block;
+
+  width: 44px;
+  height: 44px;
+
+  object-fit: contain;
+
+  transition:
+    transform var(--transition-medium),
+    opacity var(--transition-medium);
+}
+
+.contactLink:hover .iconImage {
+  transform: scale(1.06);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: var(--color-primary);
+
+  font-family: var(--font-subheading);
+  font-size: var(--caption-size);
+
+  text-transform: uppercase;
+}
+
+.value {
+  margin-top: 2px;
+
+  color: var(--color-forest-900);
+
+  font-size: var(--body-large-size);
+}
+
+.button {
+  margin-top: clamp(var(--space-10), 7vh, var(--space-10));
+}
+
+.contactLink:hover {
+  transform: translateX(4px);
+}
+
+.contactLink:hover .icon {
+  color: var(--color-primary);
+}
+
+.contactLink:hover {
+  border-color: var(--color-primary);
+}

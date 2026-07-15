@@ -1,0 +1,8 @@
+.contact {
+  display: flex;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  align-items: top;
+  justify-content: space-between;
+
+  width: 100%;
+}
