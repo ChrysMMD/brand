@@ -28,7 +28,7 @@
   /* H1 - 56/110 */
   --h1-size: clamp(2.5rem, 5vw, 3.5rem);
   --h1-line-height: 1.1;
-  --h1-weight: var(--weight-regular);
+  --h1-weight: var(--weight-bold);
   --h1-letter-spacing: -0.02em;
 
   /* H2 - 40/115 */
@@ -156,6 +156,7 @@ strong {
   line-height: var(--h2-line-height);
   font-weight: var(--h2-weight);
   letter-spacing: var(--h2-letter-spacing);
+  font-style: italic;
 }
 
 .h3 {

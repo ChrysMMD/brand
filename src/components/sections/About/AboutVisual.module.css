@@ -1,0 +1,120 @@
+.visual {
+  position: relative;
+
+  width: 100%;
+  min-height: 560px;
+}
+
+.photoFrame {
+  position: absolute;
+  top: 0;
+  left: 6%;
+
+  width: min(66%, 420px);
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-small);
+}
+
+.photo {
+  object-fit: cover;
+  object-position: center;
+}
+
+.funFacts {
+  position: absolute;
+  right: 2%;
+  bottom: 4%;
+  z-index: 6;
+
+  width: clamp(220px, 22vw, 290px);
+  aspect-ratio: 384 / 512;
+
+  transform: rotate(1deg);
+}
+
+.funFactsCard {
+  object-fit: contain;
+}
+
+.funFactsContent {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30% 16% 15%;
+}
+
+.funFactsTitle {
+  color: var(--color-background);
+
+  font-family: var(--font-subheading);
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  line-height: 1.1;
+  font-weight: var(--weight-bold);
+
+  text-transform: uppercase;
+}
+
+.funFactsList {
+  margin-top: var(--space-3);
+  padding-left: 2rem;
+
+  color: var(--color-background);
+}
+
+.funFactsList li {
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  line-height: 1.45;
+}
+
+.doodle {
+  position: absolute;
+  z-index: 5;
+
+  width: auto;
+  height: auto;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.leavesTop {
+  top: -3%;
+  left: 0;
+
+  width: 120px;
+}
+
+.leavesBottom {
+  left: 27%;
+  bottom: 0;
+
+  width: 150px;
+}
+
+.arrow {
+  top: 10%;
+  right: 1%;
+
+  width: 180px;
+}
+
+.coffee {
+  right: -4%;
+  bottom: 31%;
+
+  width: 70px;
+}
+
+.sparkles {
+  top: 2%;
+  right: -4%;
+
+  width: 35px;
+}

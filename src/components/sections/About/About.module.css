@@ -1,0 +1,8 @@
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+  align-items: center;
+  gap: clamp(3rem, 7vw, 7rem);
+
+  width: 100%;
+}

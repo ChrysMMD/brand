@@ -23,3 +23,17 @@
     width: 100%;
   }
 }
+
+.about {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+
+  padding-block: clamp(4rem, 8vh, 7rem);
+
+  background: var(--color-sand);
+}
+
+.about > * {
+  width: 100%;
+}
