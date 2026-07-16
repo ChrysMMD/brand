@@ -13,6 +13,7 @@ type ButtonProps = {
   nav?: ButtonNav;
   disabled?: boolean;
   className?: string;
+  external?: boolean;
 };
 
 export function Button({
@@ -23,6 +24,7 @@ export function Button({
   nav = "none",
   disabled = false,
   className = "",
+  external = false,
 }: ButtonProps) {
   const classNames = [
     styles.button,
@@ -47,16 +49,18 @@ export function Button({
   );
 
   if (href && !disabled) {
+    if (external) {
+      return (
+        <a href={href} className={classNames} target="_blank" rel="noreferrer">
+          {content}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={classNames}>
         {content}
       </Link>
     );
   }
-
-  return (
-    <button type={type} className={classNames} disabled={disabled}>
-      {content}
-    </button>
-  );
 }
