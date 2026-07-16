@@ -10,7 +10,13 @@ export const contactLinks: ContactLink[] = [
     label: "Email",
     value: "hello.astrid@hotmail.com",
     href: "mailto:hello.astrid@hotmail.com",
-    iconSrc: "/images/contact/mail.svg",
+    iconSrc: "/images/contact/email.png",
+  },
+  {
+    label: "Phone",
+    value: "+45 21 27 26 70",
+    href: "tel:+4521272670",
+    iconSrc: "/images/contact/mobile.png",
   },
   {
     label: "LinkedIn",
