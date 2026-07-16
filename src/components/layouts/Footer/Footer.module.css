@@ -1,0 +1,8 @@
+.footer {
+  width: 100%;
+
+  padding-block: clamp(4rem, 7vw, 6rem);
+
+  background-color: var(--color-sand);
+  color: var(--color-forest-900);
+}

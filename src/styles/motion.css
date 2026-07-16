@@ -6,19 +6,12 @@
   --duration-fast: 180ms;
   --duration-medium: 280ms;
   --duration-slow: 600ms;
+  --duration-reveal: 800ms;
+  --duration-draw: 1100ms;
 
   --transition-fast: var(--duration-fast) var(--ease-soft);
   --transition-medium: var(--duration-medium) var(--ease-out);
   --transition-slow: var(--duration-slow) var(--ease-out);
-}
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
+  --stagger-step: 140ms;
 }

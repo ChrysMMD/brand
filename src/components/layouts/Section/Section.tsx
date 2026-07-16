@@ -7,7 +7,7 @@ type SectionProps = {
   spacing?: SectionSpacing;
   className?: string;
   id?: string;
-  variant?: "default" | "hero" | "projects" | "about";
+  variant?: "default" | "hero" | "projects" | "about" | "process" | "contact";
 };
 
 export function Section({

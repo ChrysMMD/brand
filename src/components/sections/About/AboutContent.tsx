@@ -4,12 +4,12 @@ import styles from "./AboutContent.module.css";
 export function AboutContent() {
   return (
     <div className={styles.content}>
-      <h2 className={`${styles.heading} displayL`}>About me</h2>
+      <h1 className={`${styles.heading} displayL`}>About me</h1>
 
-      <p className={`${styles.intro} h2`}>
+      <h2 className={`${styles.intro} h2`}>
         I’m a designer, developer and storyteller with a love for meaningful
         details and big ideas.
-      </p>
+      </h2>
 
       <div className={styles.body}>
         <p>
@@ -26,7 +26,7 @@ export function AboutContent() {
       <div className={styles.action}>
         <Button
           href="/cv.pdf"
-          variant="primary"
+          variant="secondary"
           nav="next"
           className={styles.cvButton}
         >

@@ -9,7 +9,7 @@
 
   /* Page spacing */
   --page-padding: clamp(1rem, 3vw, 3rem);
-  --header-height: 40px;
+  --header-height: 80px;
 
   /* Section spacing */
   --section-padding-sm: clamp(var(--space-8), 6vw, var(--space-10));

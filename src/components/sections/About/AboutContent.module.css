@@ -13,12 +13,9 @@
 
 .intro {
   margin-top: var(--space-6);
+  max-width: 38ch;
 
   color: var(--color-background);
-}
-
-.cvButton {
-  color: var(--color-primary);
 }
 
 .body {
@@ -27,7 +24,7 @@
   gap: var(--space-3);
 
   max-width: 52ch;
-  margin-top: var(--space-6);
+  margin-top: var(--space-4);
 }
 
 .body p {
@@ -36,5 +33,5 @@
 
 .action {
   width: min(100%, 320px);
-  margin-top: var(--space-6);
+  margin-top: var(--space-4);
 }

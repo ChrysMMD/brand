@@ -1,0 +1,19 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+
+  width: 100%;
+}
+
+.heading {
+  margin: 0;
+
+  color: var(--color-text);
+
+  --h1-size: clamp(2.5rem, 5vw, 3.5rem);
+  --h1-line-height: 1.1;
+  --h1-weight: var(--weight-bold);
+  --h1-letter-spacing: -0.02em;
+  text-transform: uppercase;
+}

@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { processSteps } from "./process.data";
 import styles from "./Timeline.module.css";
+import type { CSSProperties } from "react";
 
 export function Timeline() {
   return (
     <div className={styles.timeline}>
       <div className={styles.line} />
 
-      {processSteps.map((step) => {
+      {processSteps.map((step, index) => {
         const Icon = step.icon;
 
         return (
@@ -15,6 +16,11 @@ export function Timeline() {
             key={step.number}
             className={styles.step}
             data-number={step.number}
+            style={
+              {
+                "--step-index": index,
+              } as React.CSSProperties
+            }
           >
             <div className={styles.icon}>
               <Icon size={28} strokeWidth={1.75} />
@@ -73,38 +79,11 @@ export function Timeline() {
       />
 
       <Image
-        src="/images/process/doodle_star1.svg"
-        alt=""
-        width={120}
-        height={120}
-        className={`${styles.doodle} ${styles.star1}`}
-        aria-hidden="true"
-      />
-
-      <Image
-        src="/images/process/doodle_star2.svg"
-        alt=""
-        width={120}
-        height={120}
-        className={`${styles.doodle} ${styles.star2}`}
-        aria-hidden="true"
-      />
-
-      <Image
         src="/images/process/doodle_star3.svg"
         alt=""
         width={120}
         height={120}
         className={`${styles.doodle} ${styles.star3}`}
-        aria-hidden="true"
-      />
-
-      <Image
-        src="/images/process/doodle_star4.svg"
-        alt=""
-        width={120}
-        height={120}
-        className={`${styles.doodle} ${styles.star4}`}
         aria-hidden="true"
       />
     </div>

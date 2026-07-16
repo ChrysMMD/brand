@@ -9,11 +9,6 @@ export function WorkProcessContent() {
         Every project starts with curiosity, grows through collaboration and is
         refined through thoughtful design.
       </p>
-
-      <p className={`${styles.description} bodyLarge`}>
-        My process combines UX, visual design and frontend development to create
-        meaningful digital experiences.
-      </p>
     </div>
   );
 }

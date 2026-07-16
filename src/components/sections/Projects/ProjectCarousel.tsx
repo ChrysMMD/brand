@@ -34,10 +34,6 @@ export function ProjectCarousel() {
       aria-roledescription="carousel"
       aria-label="Selected projects"
     >
-      <h1 className={styles.heading} aria-label="Selected projects">
-        Selected projects
-      </h1>
-
       <div className={styles.presentationArea}>
         <button
           type="button"

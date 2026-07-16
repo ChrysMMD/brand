@@ -1,9 +1,12 @@
 import { Navbar } from "@/components/ui/Navbar/Navbar";
 import { Hero } from "@/components/sections/Hero/Hero";
-import { ProjectCarousel } from "@/components/sections/Projects/ProjectCarousel";
+import { Projects } from "@/components/sections/Projects/Projects";
 import { Container } from "@/components/layouts/Container/Container";
 import { Section } from "@/components/layouts/Section/Section";
 import { About } from "@/components/sections/About/About";
+import { WorkProcess } from "@/components/sections/WorkProcess/WorkProcess";
+import { Contact } from "@/components/sections/Contact/Contact";
+import { Footer } from "@/components/layouts/Footer/Footer";
 
 export default function HomePage() {
   return (
@@ -24,7 +27,7 @@ export default function HomePage() {
 
         <Section id="projects" variant="projects">
           <Container size="xl">
-            <ProjectCarousel />
+            <Projects />
           </Container>
         </Section>
 
@@ -33,7 +36,15 @@ export default function HomePage() {
             <About />
           </Container>
         </Section>
+
+        <Section id="process" variant="process">
+          <Container size="xl">
+            <WorkProcess />
+          </Container>
+        </Section>
       </main>
+
+      <Footer />
     </>
   );
 }

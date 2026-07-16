@@ -5,13 +5,16 @@
   grid-template-columns: repeat(5, 1fr);
   gap: var(--space-6);
 
-  margin-top: clamp(4rem, 10vh, 7rem);
+  margin-top: clamp(3rem, 9vh, 5rem);
+  margin-bottom: clamp(2.5rem, 6vh, 4rem);
 }
 
 .title,
 .subtitle,
 .description {
+  position: relative;
   z-index: 2;
+  margin: 0;
 }
 
 .line {
@@ -27,6 +30,10 @@
 
   opacity: 0.35;
   z-index: 1;
+
+  transform-origin: left center;
+
+  animation: drawLine 900ms ease forwards;
 }
 
 .step {
@@ -38,11 +45,18 @@
   align-items: center;
 
   text-align: center;
+
+  opacity: 0;
+  transform: translateY(32px);
+
+  animation: revealStep var(--duration-reveal) var(--ease-out) forwards;
+  animation-delay: calc(500ms + (var(--step-index) * var(--stagger-step)));
 }
 
 .icon {
   display: grid;
   place-items: center;
+  margin-bottom: var(--space-1);
 
   width: 78px;
   height: 78px;
@@ -55,6 +69,9 @@
 
   color: var(--color-text);
   z-index: 2;
+
+  animation: glowStep var(--duration-slow) var(--ease-out) forwards;
+  animation-delay: calc(500ms + (var(--step-index) * var(--stagger-step)));
 }
 
 .title {
@@ -66,12 +83,14 @@
 .subtitle {
   color: var(--color-primary);
   text-transform: uppercase;
+  margin-top: -6px;
 }
 
 .description {
   max-width: 26ch;
   color: var(--color-text);
   text-align: center;
+  margin-top: var(--space-2);
 }
 
 .step::before {
@@ -106,73 +125,110 @@
 
   pointer-events: none;
   user-select: none;
+
+  opacity: 0;
+  transform: scale(0.84) rotate(-4deg);
+
+  animation: revealDoodle var(--duration-slow) var(--ease-spring) forwards;
 }
 
 .bulb {
-  top: -18%;
-  left: 18%;
+  top: -65%;
+  right: -5%;
 
-  width: clamp(90px, 10vw, 150px);
+  width: clamp(20px, 10vw, 40px);
 
-  transform: rotate(-8deg);
+  transform: rotate(5deg);
+  animation-delay: 1150ms;
 }
 
 .research {
-  top: 18%;
-  left: 37%;
+  bottom: -30%;
+  left: -5%;
 
   width: clamp(90px, 9vw, 140px);
 
   transform: rotate(5deg);
+  animation-delay: 1280ms;
 }
 
 .feedback {
-  top: -12%;
-  right: 16%;
+  top: -50%;
+  right: -5%;
 
   width: clamp(100px, 10vw, 150px);
 
   transform: rotate(6deg);
+  animation-delay: 1410ms;
 }
 
 .compound {
-  top: 2%;
-  right: 3%;
+  bottom: -15%;
+  right: 35%;
 
-  width: clamp(55px, 6vw, 90px);
+  width: clamp(120px, 15vw, 200px);
+  animation-delay: 1410ms;
 }
 
 .lookandfeel {
-  top: 2%;
-  right: 3%;
+  top: -100%;
+  right: 6%;
 
-  width: clamp(55px, 6vw, 90px);
-}
-
-.star1 {
-  top: 2%;
-  right: 3%;
-
-  width: clamp(55px, 6vw, 90px);
-}
-
-.star2 {
-  top: 2%;
-  right: 3%;
-
-  width: clamp(55px, 6vw, 90px);
+  width: clamp(150px, 13vw, 300px);
+  animation-delay: 1310ms;
 }
 
 .star3 {
   top: 2%;
-  right: 3%;
+  left: -2%;
 
-  width: clamp(55px, 6vw, 90px);
+  width: clamp(25px, 6vw, 35px);
+  animation-delay: 1540ms;
 }
 
-.star4 {
-  top: 2%;
-  right: 3%;
+@keyframes drawLine {
+  from {
+    transform: scaleX(0);
+  }
 
-  width: clamp(55px, 6vw, 90px);
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes glowStep {
+  0% {
+    box-shadow: 0 0 0 6px var(--color-background);
+  }
+
+  55% {
+    box-shadow:
+      0 0 0 6px var(--color-background),
+      0 0 26px rgb(254 205 113 / 45%);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 6px var(--color-background),
+      0 0 12px rgb(254 205 113 / 18%);
+  }
+}
+
+@keyframes revealDoodle {
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes revealStep {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
