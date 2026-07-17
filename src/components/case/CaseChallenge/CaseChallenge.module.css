@@ -1,0 +1,97 @@
+.section {
+  padding-block: clamp(6rem, 10vw, 10rem);
+
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.container {
+  width: min(100% - 3rem, 1220px);
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin: 0 0 clamp(2.5rem, 5vw, 4.5rem);
+
+  color: var(--color-primary);
+
+  font-family: var(--font-body);
+  font-size: var(--caption-size);
+  line-height: var(--caption-line-height);
+  font-weight: var(--caption-weight);
+  letter-spacing: var(--caption-letter-spacing);
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.8fr) minmax(0, 2.2fr);
+  gap: clamp(3rem, 7vw, 8rem);
+
+  align-items: start;
+}
+
+.title {
+  max-width: 7ch;
+  margin: 0;
+
+  font-family: var(--font-oswald);
+  font-size: var(--h3-size);
+  line-height: var(--h3-line-height);
+  font-weight: var(--h3-weight);
+  letter-spacing: var(--h3-letter-spacing);
+  text-transform: uppercase;
+}
+
+.challenges {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 4rem);
+
+  padding-top: 0.4rem;
+}
+
+.challenge {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.challengeTitle {
+  max-width: 10ch;
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.challengeDescription {
+  max-width: 26ch;
+  margin: 0;
+
+  color: color-mix(in srgb, var(--color-text) 68%, transparent);
+
+  font-size: var(--text-body);
+  line-height: 1.65;
+}
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 1220 / 520;
+
+  margin-top: clamp(4rem, 8vw, 7rem);
+
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}

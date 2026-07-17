@@ -6,35 +6,48 @@ export const caseStudies: CaseStudy[] = [
 
     hero: {
       eyebrow: "Case Study",
+
       title: "Tusmørke",
 
       description:
-        "A mobile-first web application created for players in the Danish LARP community Tusmørke. The platform gathers event booking, territory management and personal notes in one accessible place.",
+        "Designed and developed a full-stack platform that helps LARP organizers and players manage bookings, territories and essential game information in one intuitive mobile experience.",
 
-      background: "/images/projectScene/tusmoerke/Background.png",
-      mobile: "/images/projectScene/tusmoerke/tus_mobil.png",
       divider: "/images/projectScene/tusmoerke/line.svg",
 
-      role: ["UX/UI Designer", "Frontend Developer"],
+      role: ["UX/UI Designer", "Frontend Developer", "Design System"],
 
-      tools: ["Figma", "Next.js", "React", "Supabase"],
+      tools: ["Figma", "React", "Next.js", "TypeScript", "Supabase"],
 
-      type: "Solo course project",
+      type: "Graduation Project",
+
+      scene: {
+        background: "/images/cases/tusmoerke/case_desk_tus.png",
+      },
     },
 
     challenge: {
       eyebrow: "The Challenge",
-      title: "Creating one shared platform for the community",
-      description:
-        "Important information and practical tools were spread across different platforms. Players needed a simpler way to access bookings, territories and personal information before and during events.",
+      title: "The Challenge",
 
-      goals: [
-        "Gather essential tools in one place",
-        "Create a clear and accessible booking flow",
-        "Give players an overview of active territories",
-        "Support private, personal note-taking",
-        "Design the experience mobile-first",
+      challenges: [
+        {
+          title: "Scattered Information",
+          description:
+            "Players relied on multiple platforms to find important game information.",
+        },
+        {
+          title: "Booking Friction",
+          description:
+            "Reserving private scenes required unnecessary steps and navigation.",
+        },
+        {
+          title: "Territory Overview",
+          description:
+            "Players lacked a quick overview of changing territory ownership and events.",
+        },
       ],
+
+      image: "/images/cases/tusmoerke/challenge_bg.png",
     },
 
     research: {

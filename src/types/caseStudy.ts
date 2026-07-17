@@ -16,26 +16,36 @@ export type CaseMetaItem = {
   value: string | string[];
 };
 
+export type CaseHeroSceneData = {
+  background: string;
+  glow?: string;
+};
+
 export type CaseHeroData = {
   eyebrow?: string;
   title: string;
   description: string;
 
-  background: string;
-  mobile: string;
   divider: string;
 
-  role: string | string[];
+  role: string[];
   tools: string[];
   type: string;
+
+  scene: CaseHeroSceneData;
+};
+
+export type CaseChallengeItem = {
+  title: string;
+  description: string;
 };
 
 export type CaseChallengeData = {
   eyebrow?: string;
   title: string;
-  description: string;
-  goals?: string[];
-  image?: CaseImage;
+  challenges: CaseChallengeItem[];
+  image?: string;
+  imageAlt?: string;
 };
 
 export type CaseResearchItem = {
@@ -129,7 +139,7 @@ export type CaseStudy = {
 
   hero: CaseHeroData;
 
-  challenge?: CaseChallengeData;
+  challenge: CaseChallengeData;
   research?: CaseResearchData;
   process?: CaseProcessData;
   designHighlights?: CaseDesignHighlightsData;

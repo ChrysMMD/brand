@@ -1,7 +1,15 @@
 import Image from "next/image";
-import { UserRound, Folder, Wrench } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  Folder,
+  Layers3,
+  UserRound,
+  Wrench,
+} from "lucide-react";
 
 import type { CaseHeroData } from "@/types/caseStudy";
+
+import CaseHeroScene from "./CaseHeroScene/CaseHeroScene";
 
 import styles from "./CaseHero.module.css";
 
@@ -12,17 +20,6 @@ type CaseHeroProps = {
 export function CaseHero({ data }: CaseHeroProps) {
   return (
     <section className={styles.hero}>
-      <Image
-        src={data.background}
-        alt=""
-        fill
-        priority
-        className={styles.background}
-        sizes="100vw"
-      />
-
-      <div className={styles.overlay} />
-
       <div className={styles.container}>
         <div className={styles.content}>
           {data.eyebrow && (
@@ -44,29 +41,35 @@ export function CaseHero({ data }: CaseHeroProps) {
 
           <div className={styles.meta}>
             <div className={styles.metaItem}>
-              <div className={styles.metaIconWrap}>
-                <UserRound className={styles.metaIcon} aria-hidden="true" />
+              <div className={styles.metaIconRing}>
+                <UserRound
+                  className={styles.metaIcon}
+                  aria-hidden="true"
+                  strokeWidth={1}
+                />
               </div>
 
-              <div>
+              <div className={styles.metaContent}>
                 <span className={styles.metaLabel}>My Role</span>
 
                 <div className={styles.metaValue}>
-                  {Array.isArray(data.role) ? (
-                    data.role.map((role) => <span key={role}>{role}</span>)
-                  ) : (
-                    <span>{data.role}</span>
-                  )}
+                  {data.role.map((role) => (
+                    <span key={role}>{role}</span>
+                  ))}
                 </div>
               </div>
             </div>
 
             <div className={styles.metaItem}>
-              <div className={styles.metaIconWrap}>
-                <Wrench className={styles.metaIcon} aria-hidden="true" />
+              <div className={styles.metaIconRing}>
+                <Wrench
+                  className={styles.metaIcon}
+                  aria-hidden="true"
+                  strokeWidth={1}
+                />
               </div>
 
-              <div>
+              <div className={styles.metaContent}>
                 <span className={styles.metaLabel}>Tools</span>
 
                 <div className={styles.metaValue}>
@@ -78,11 +81,15 @@ export function CaseHero({ data }: CaseHeroProps) {
             </div>
 
             <div className={styles.metaItem}>
-              <div className={styles.metaIconWrap}>
-                <Folder className={styles.metaIcon} aria-hidden="true" />
+              <div className={styles.metaIconRing}>
+                <Folder
+                  className={styles.metaIcon}
+                  aria-hidden="true"
+                  strokeWidth={1}
+                />
               </div>
 
-              <div>
+              <div className={styles.metaContent}>
                 <span className={styles.metaLabel}>Type</span>
 
                 <div className={styles.metaValue}>
@@ -93,19 +100,7 @@ export function CaseHero({ data }: CaseHeroProps) {
           </div>
         </div>
 
-        <div className={styles.visual}>
-          <div className={styles.glow} />
-
-          <Image
-            src={data.mobile}
-            alt="Tusmørke application shown on a mobile phone"
-            width={459}
-            height={456}
-            priority
-            sizes="(max-width: 768px) 70vw, 620px"
-            className={styles.mobile}
-          />
-        </div>
+        <CaseHeroScene scene={data.scene} />
       </div>
     </section>
   );

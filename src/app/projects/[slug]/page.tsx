@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { CaseHero } from "@/components/case/CaseHero/CaseHero";
+import CaseChallenge from "@/components/case/CaseChallenge/CaseChallenge";
 
 import { caseStudies, getCaseStudyBySlug } from "@/data/caseStudies";
 
@@ -26,6 +27,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   return (
     <main>
       <CaseHero data={caseStudy.hero} />
+
+      <CaseChallenge data={caseStudy.challenge} />
     </main>
   );
 }

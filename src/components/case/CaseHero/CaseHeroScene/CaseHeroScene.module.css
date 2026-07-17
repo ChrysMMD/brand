@@ -1,0 +1,17 @@
+.scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.background {
+  object-fit: cover;
+  object-position: center;
+}
+
+.glow {
+  object-fit: cover;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
